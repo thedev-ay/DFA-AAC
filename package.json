@@ -1,19 +1,33 @@
 {
-  "name": "DFAAppointmentAvailabilityChecker",
-  "version": "1.0.0",
-  "description": "Checks for passport appointment availability",
+  "name": "DFAAAC",
+  "version": "1.1.0",
+  "description": "DFA Appointment Availability Checker",
   "main": "index.js",
   "type": "module",
   "scripts": {
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "DFA",
+    "Passport Appointment"
+  ],
+  "author": "@thedev.ay",
   "license": "MIT",
+  "homepage": "https://github.com/thedev-ay/DFA-AAC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thedev-ay/DFA-AAC.git"
+  },
   "dependencies": {
     "axios": "^0.21.1",
+    "cheerio": "^1.0.0-rc.6",
     "dayjs": "^1.10.4",
-    "dotenv": "^8.2.0"
+    "dotenv": "^8.2.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "nodemailer": "^6.6.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.25.0"
   }
 }
