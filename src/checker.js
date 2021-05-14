@@ -3,15 +3,12 @@ import { getDates, getTimeslots } from "./api/dfa.js";
 import { scrapeTimeslots } from "./util/scraper.js";
 import { mailAvailableTimeslots } from "./util/mailer.js";
 
-const getCurrentDate = dayjs().format("YYYY-MM-DD");
-const getDateAfterOneYear = dayjs().add(12, "month").format("YYYY-MM-DD");
-
-const findAvailableTimeslots = async (siteId) => {
+const findAvailableTimeslots = async (siteId, fromDate, toDate) => {
     console.log("Current Time: ", dayjs().format("L LTS"));
 
     const rawDates = await getDates({
-        fromDate: getCurrentDate,
-        toDate: getDateAfterOneYear,
+        fromDate,
+        toDate,
         siteId,
         requestedSlots: 1,
     });
